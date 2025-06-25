@@ -56,7 +56,7 @@ export const UI = () => {
   const [bookFloating, setBookFloating] = useAtom(bookFloatingAtom);
   const audioRef = useRef(null);
 
-  // Initialize audio once
+  // Initialize audio once.
   useEffect(() => {
     audioRef.current = new Audio("/audios/page-flip-01a.mp3");
     audioRef.current.volume = 0.3;

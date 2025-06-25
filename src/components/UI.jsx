@@ -56,7 +56,7 @@ export const UI = () => {
   const [bookFloating, setBookFloating] = useAtom(bookFloatingAtom);
   const audioRef = useRef(null);
 
-  // Initialize audio once.
+  // Initialize audio once
   useEffect(() => {
     audioRef.current = new Audio("/audios/page-flip-01a.mp3");
     audioRef.current.volume = 0.3;
@@ -118,8 +118,8 @@ export const UI = () => {
         </div>
 
         {/* Navigation */}
-        <div className="w-full overflow-auto pointer-events-auto flex justify-center pb-8">
-          <div className="overflow-auto flex items-center gap-3 max-w-full px-6">
+        <div className="w-full overflow-auto pointer-events-auto flex justify-center pb-4 sm:pb-6 md:pb-8 scrollbar-hide">
+          <div className="overflow-auto flex items-center gap-2 sm:gap-3 max-w-full px-3 sm:px-4 md:px-6 scrollbar-hide">
             {[...pages].map((_, index) => (
               <button
                 key={index}
